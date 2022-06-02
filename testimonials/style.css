@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 80px;
+  background-color: #fff;
+}
+
+.testimonials h1 {
+  text-align: center;
+}
+
+.testimonials ul {
+  list-style: none;
+  text-align: center;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+  border-radius: 4px;
+}
+
+.js .testimonials li {
+  display: none;
+}
+
+.testimonials li.ativo {
+  display: block;
+}
