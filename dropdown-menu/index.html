@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive dropdown menu</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <div class="logo">
+                <a href="#">Brand</a>
+            </div><!--Brand-Mobile-->
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo_name">Brand</span>
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </div>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a class="html-css-link" href="#">HTML & CSS <i class="dropdown-item fa fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="sub-menu html-css-sub-menu">
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">Responsive</a></li>
+                            <li class="more">
+                                <a class="html-css-sub-sub-menu" href="#">More
+                                    <i class="dropdown-sub-item fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                                <ul class="sub-sub-menu html-css-sub-sub-menu">
+                                    <li><a href="#">Forms</a></li>
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">Cards</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="js-link" href="#">Javascript <i class="dropdown-item fa fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="sub-menu js-sub-menu">
+                            <li><a href="#">ECS6</a></li>
+                            <li><a href="#">React</a></li>
+                            <li><a href="#">NodeJS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div><!--Menu-->
+            <div class="search-box">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="input-search">
+                    <input type="text" placeholder="search...">
+                </div>
+            </div><!--Search-->
+        </div><!--Navbar-->
+    </nav>
+    <script src="scrips.js"></script>
+</body>
+</html>
