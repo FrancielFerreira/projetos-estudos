@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="form1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main id="main-contact">
+        <div class="contact-container">
+            <aside class="aside">
+                <div id="aside_phone">
+                    <div class="aside_icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="aside_content">
+                        <address>
+                            <h3>Telefone:</h3>
+                            <p>(00) 0000-0000 </p>
+                            <p>(00) 0000-0000 </p>
+                        </address>
+                    </div>
+                </div>
+                <div id="aside_email">
+                    <div class="aside_icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="aside_content">
+                        <address>         
+                            <h3>E-mail:</h3>
+                            <p>mail@mail.com</p>
+                        </address>
+                    </div>
+                </div>
+                <div id="aside_adress">
+                    <div class="aside_icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="aside_content">
+                        <address>
+                        <h3>Endereço: </h3>
+                        <p>Brasília, Brasil</p>
+                        <p>CEP: 00000-000</p>
+                        </address>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="content-form">
+                <header class="form-header">
+                    <h1>Entre em contato</h1>
+                    <p>Preencha o formulário abaixo com seus dados e uma breve descrição do que você faz, que retornarei o mais breve possível.</p>
+                </header>
+                <form action="#" method="POST" >
+                    <input type="hidden" name="_template" value="table">
+                    <div class="input-box">
+                        <label for="name">Nome*</label>
+                        <input type="text" name="name" placeholder="Nome" id="name" autocomplete="off" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Telefone*</label>
+                        <input type="text" placeholder="Telefone" id="phone" required oninput="maskPhone(this, 'tel')" class="form-control" autocomplete="off" name="customer['tel']">
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail*</label>
+                        <input type="text" name="email" placeholder="E-mail" id="email" autocomplete="off" required>
+                    </div>
+                    <div class="message-box">
+                        <label for="message">Mensagem*</label>
+                        <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                    </div>
+                    <div id="button_form" class="input-box">
+                        <input type="submit" value="Enviar" ></input>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <script src="form.js"></script>
+</body>
+</html>
