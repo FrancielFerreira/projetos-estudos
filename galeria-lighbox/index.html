@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria LightBox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <ul>
+        <li><a href="#img1"><img src="img (1).jpg" class="min"></a></li>
+        <li><a href="#img2"><img src="img (1).png" class="min"></a></li>
+        <li><a href="#img3"><img src="img (2).jpg" class="min"></a></li>
+        <li><a href="#img4"><img src="img (4).jpg" class="min"></a></li>
+    </ul>
+
+    <div class="galeria">
+        <div class="lightbox" id="img1">
+            <div class="box_img">
+                <a href="#img4" class="btn" id="prev">&#171;</a>
+                <a href="#img2" class="btn" id="next">&#187;</a>
+                <a href="" class="btn" id="close">X</a>
+                <img src="img (1).jpg" alt="imagem 1">
+            </div>
+        </div>
+    
+        <div class="lightbox" id="img2">
+            <div class="box_img">
+                <a href="#img1" class="btn" id="prev">&#171;</a>
+                <a href="#img3" class="btn" id="next">&#187;</a>
+                <a href="" class="btn" id="close">X</a>
+                <img src="img (1).png" alt="imagem 1">
+            </div>
+        </div>
+    
+        <div class="lightbox" id="img3">
+            <div class="box_img">
+                <a href="#img2" class="btn" id="prev">&#171;</a>
+                <a href="#img4" class="btn" id="next">&#187;</a>
+                <a href="" class="btn" id="close">X</a>
+                <img src="img (2).jpg" alt="imagem 1">
+            </div>
+        </div>
+    
+        <div class="lightbox" id="img4">
+            <div class="box_img">
+                <a href="#img3" class="btn" id="prev">&#171;</a>
+                <a href="#img1" class="btn" id="next">&#187;</a>
+                <a href="" class="btn" id="close">X</a>
+                <img src="img (4).jpg" alt="imagem 1">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
