@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*colors theme*/
+:root {
+    --fontColor_01: #3dba7d;
+    --fontColor_02: #4abff1;
+    --fontColor_03: #2ab0b3;
+    --fontColor_04: #7effc3;
+    --bgColor: #47c2e8;
+}
+
+/*all styles*/
+*, body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*menu desktop*/
+header nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 90px;
+    z-index: 9;
+}
+nav .navbar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto 20px auto;
+}
+.navbar .logo {
+    height: 52px;
+    width: 228px;
+}
+.navbar .logo img {
+    height: 100%;
+    width: 100%;
+}
+.navbar .menu {
+    display: flex;
+}
+.navbar .menu li {
+    list-style: none;
+}
+.navbar .menu li a {
+    padding: 10px;
+    font-size: 18px;
+    color: var(--fontColor_01);
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: all .5s ease;
+}
+.navbar .menu li a:hover {
+    color: var(--fontColor_03);
+}
+.navbar .menu li a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid var(--fontColor_03);
+    opacity: 0;
+    transition: all .8s ease;
+}
+.navbar .menu li a:hover:before{
+    width: 100%;
+    opacity: 1;
+}
+
+.navbar .search-box {
+    position: relative;
+    height: 50px;
+    min-width: 200px;
+}
+
+/*caixa de pesquisa*/
+.search-box input[type="text"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(255 255 255 / 34%);
+    font-size: 16px;
+    outline: none;
+    border: 2px solid var(--fontColor_01);
+    border-radius: 5px;
+    padding: 0 20px;
+}
+.search-box input::placeholder {
+    color: var(--fontColor_01);
+}
+.search-box a {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    border-radius: 0 5px 5px 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    color: var(--fontColor_01);
+    font-size: 20px;
+    border-left: 2px solid var(--fontColor_01);
+    transition: all .5s ease;
+}
+.search-box a:hover {
+    background-color: var(--fontColor_04);
+}
+.menu, .logo, .navmenu ul {
+    display: flex;
+}
+.logo h1 {
+    font-size: 0;
+}
+.logo a {
+    height: 52px;
+    width: 228px;
+}
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+.navmenu ul {
+    list-style: none;
+}
+.navmenu a {
+    padding: 10px;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 988px) {
+    .navbar .menu {
+        display: none;
+    }
+    .photographer svg {
+        bottom: 5%;
+    }
+    .content {
+        top: 20%;
+    }
+
+    /*menu mobile*/
+    #menu-mobile {
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        right: 0;
+        background-color: #fff;
+        height: 0;
+        transition: .6s;
+        z-index: 1;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 90px);
+        visibility: visible;
+        overflow-y: auto;
+
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        align-items: center;
+    }
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after, #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .4s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(45deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-45deg);
+        top: -7px;
+    }
+}
