@@ -11,8 +11,7 @@ window.onload = ()=> { //apenas após carregar a página
         let newIndex = i // transformando o contador em uma nova variável
         let indexTitleImg 
         gallery[i].onclick = ()=> {
-            indexTitleImg = newIndex // troca o índice da imagem na legenda 
-            // console.log(i);
+            indexTitleImg = newIndex // troca o índice da imagem na legenda
             function preview() {
                 currentImg.textContent = newIndex + 1;
                 let imageSelectedUrl = gallery[newIndex].querySelector("img").src; // pega o link da imagem clicada
