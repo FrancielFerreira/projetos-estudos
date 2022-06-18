@@ -1,0 +1,181 @@
+<div class="carrosel-container">
+  <ul class="carrosel-lista">
+    <li class="carrousel-item ativo"><picture class="carrosel-img"> <img alt="foto 1" src="https://www.cache2net3.com//Repositorio/8731/Slides/55d6fa12-b.webp" /> </picture>
+    <div class="carrosel-txt"><span class="titulo-tag">Cbrain internacional</span>
+    <h1>Somos especialistas em cargas refrigeradas e congeladas!</h1>
+    </div>
+    </li>
+    <li class="carrousel-item"><picture class="carrosel-img"> <img alt="foto 2" src="https://www.cache2net3.com//Repositorio/8731/Slides/5c38cc2c-1.webp" /> </picture>
+    <div class="carrosel-txt"><span class="titulo-tag">Cbrain internacional</span>
+    <h1>Levando sua carga para o mundo!</h1>
+    </div>
+    </li>
+    <li class="carrousel-item"><picture class="carrosel-img"> <img alt="foto 3" src="https://www.cache2net3.com//Repositorio/8731/Slides/3db10406-7.webp" /> </picture>
+    <div class="carrosel-txt"><span class="titulo-tag">Cbrain internacional</span>
+    <h1>Agente de carga multimodal, desenhado para voc&ecirc;!</h1>
+    </div>
+    </li>
+  </ul>
+  
+  <div class="carrosel-btn"><button class="btn-voltar" type="button">&lang;</button><button class="btn-proximo" type="button">&rang;</button></div>
+  
+  <div class="carrosel-dots"><span></span> <span></span> <span></span></div>
+  </div>
+  <style type="text/css">/*lagura-total*/
+      #containerEditavel-16368 > div {
+      padding-right: 0;
+      padding-left: 0;
+      overflow-x: hidden;
+    }
+    .carrosel-container {
+    position: relative;
+    background: #222;
+  }
+  .carrosel-lista {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+  }
+  .carrousel-item {
+    position: relative;
+    display: none;
+    color: #fff;
+    height: 100vh;
+    min-width: 100%;
+  }
+  .carrousel-item.ativo {
+    display: block;
+    opacity: 0;
+    animation: fade 1s ease forwards;
+  }
+  .carrosel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .carrosel-txt {
+    animation: 1s top ease .3s forwards;
+    opacity: 0;
+    transform: translate3d(-50%, -20%, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+      max-width: 680px;
+  }
+    .titulo-tag {
+      background: #E7CBD2;
+      color: #212045;
+      padding: 8px 16px;
+      text-transform: uppercase;
+      font-size: 2.25rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 32px;
+    }
+    .carrosel-txt h1 {
+      font-size: 2rem;
+      font-style: oblique;
+      margin: 0;
+    }
+  
+  .carrosel-btn button {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0 80px 0 40px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 3rem;
+  }
+  .carrosel-btn button:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent);
+  }
+  .carrosel-btn button.btn-proximo {
+    padding: 0 40px 0 80px;
+    right: 0;
+  }
+  .carrosel-btn button.btn-proximo:hover {
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.2), transparent);
+  }
+  
+  .carrosel-dots {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 16px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+  .carrosel-dots span {
+    border: 1px solid #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  .carrosel-dots span.ativo {
+    background: #fff;
+  }
+  
+  @media (max-width: 992px) {
+    .carrosel-txt span { font-size: 1.5rem;}
+    .carrosel-txt h1 {font-size: 1.5rem;}
+    }
+  @media (max-width: 500px) {
+    .carrosel-txt span { font-size: 1.25rem;}
+    .carrosel-txt h1 {font-size: 1.25rem;}
+    }
+  
+  /*animações*/
+  @keyframes fade {
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes top {
+    to {
+      opacity: 1;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+  </style>
+  <script>
+    const carrosel = document.querySelectorAll(".carrousel-item");
+  const btnVoltar = document.querySelector(".btn-voltar");
+  const btnProximo = document.querySelector(".btn-proximo");
+  const dots = document.querySelectorAll(".carrosel-dots span")
+  let slides = carrosel.length - 1;
+  let count = 0;
+  dots[count].classList.add("ativo")
+  
+  function proximoSlide() {
+    carrosel[count].classList.remove("ativo");
+    dots[count].classList.remove("ativo");
+    count++;
+    count > slides ? (count = 0) : 0;
+    carrosel[count].classList.add("ativo");
+    dots[count].classList.add("ativo");
+  }
+  
+  function voltaSlide() {
+    carrosel[count].classList.remove("ativo");
+    dots[count].classList.remove("ativo");
+    count--;
+    count < 0 ? (count = slides) : 0;
+    carrosel[count].classList.add("ativo");
+    dots[count].classList.add("ativo");
+  }
+  
+  function iniciarSlide() {
+    setInterval(() => proximoSlide(), 5000);
+  }
+  
+  btnProximo.addEventListener("click", proximoSlide);
+  btnVoltar.addEventListener("click", voltaSlide);
+  window.addEventListener("load", iniciarSlide);
+  
+  </script>
