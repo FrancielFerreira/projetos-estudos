@@ -40,9 +40,10 @@
 
 
     <script>
+        const preload = document.querySelector('.loader_bg') 
         setTimeout(function(){
-            $('.loader_bg').fadeToggle();
-        }, 1500);
+                preload.style.display = 'none';
+        }, 2000);
     </script>
 </body>
 </html>
