@@ -1,5 +1,6 @@
 function slider(speed) {
   const allSlides = $("[data-slide-item]"),
+        slideContent = $('[data-anime]'),
         firstSlide = $("[data-slide-item]").first(),
         lastSlide = $("[data-slide-item]").last();
   let speedSlide = setInterval(playSlide, speed);
