@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Slide Automático com Controles</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<section data-slide="introdcao">
+		<ul class="introducao">
+			<li data-slide-item>
+				<picture>
+					<source media="(max-width: 800px)" srcset="https://picsum.photos/id/1025/768/900">
+					<img alt="Animais" src="https://picsum.photos/id/1025/1200/600" width="1400" height="760" alt="Slide 1"/>
+				</picture>
+				<div class="slide-content">
+					<div data-anime>
+						<h2>Animais</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</li>
+			<li data-slide-item>
+				<picture>
+					<source media="(max-width: 800px)" srcset="https://picsum.photos/id/1039/768/1200">
+					<img alt="Animais" src="https://picsum.photos/id/1039/1200/600" width="1400" height="760" alt="Slide 1"/>
+				</picture>
+				<div class="slide-content">
+					<div data-anime>
+						<h2>Florestas</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</li>
+			<li data-slide-item>
+				<picture>
+					<source media="(max-width: 800px)" srcset="https://picsum.photos/id/1015/768/1200">
+					<img alt="Animais" src="https://picsum.photos/id/1015/1200/600" width="1400" height="760" alt="Slide 1"/>
+				</picture>
+				<div class="slide-content">
+					<div data-anime>
+						<h2>Montanhas</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+    <div class="controls">
+      <button class="btn-prev">&lang;</button>
+      <button class="btn-next">&rang;</button>
+    </div>
+	</section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="anim.js"></script>
+	<script type="text/javascript" src="slide.js"></script>
+</body>
+
+</html>

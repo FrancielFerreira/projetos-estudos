@@ -4,16 +4,21 @@
   margin: 0;
 }
 
-.introducao {
-  list-style: none;
-}
-
 [data-slide] {
   position: relative;
 }
 
+.introducao {
+  font-size: 0;
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+}
+
 [data-slide-item] {
   position: relative;
+  min-width: 100%;
+  pointer-events: none;
 }
 
 [data-slide-item="hide"] {
@@ -27,6 +32,7 @@
 }
 
 .slide-content {
+  font-size: 1rem;
   position: absolute;
   display: grid;
   height: 100%;
