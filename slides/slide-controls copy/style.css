@@ -4,22 +4,30 @@
   margin: 0;
 }
 
-.introducao {
-  font-size: 0;
-  list-style: none;
-}
-
-
 [data-slide] {
   position: relative;
 }
 
+.introducao {
+  font-size: 0;
+  list-style: none;
+  /* display: flex; */
+  overflow: hidden;
+}
+
 [data-slide-item] {
   position: relative;
+  display: block;
+  min-width: 100%;
 }
 
 [data-slide-item="hide"] {
   display: none;
+}
+
+[data-slide-item="show"] {
+  display: block;
+  animation: fadeIn .5s forwards;
 }
 
 [data-slide] img {
@@ -40,18 +48,9 @@
 }
 
 [data-anime] {
-  animation: fadeUp .8s;
+  animation: fadeUp .8s .3s forwards;
   padding-left: 40px;
-}
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+  opacity: 0;
 }
 
 .controls {
@@ -66,4 +65,32 @@
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
